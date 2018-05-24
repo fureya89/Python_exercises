@@ -11,7 +11,10 @@ def quiz(rangeRandomNumber, numberOfShots):
         if liczba != random_number:
             numberOfShots -= 1
             if numberOfShots > 0:
-                print("To nie jest ta liczba! Pozostało {} próby".format(numberOfShots))
+                if liczba > random_number:
+                    print("podałeś za dużą liczbę. Spróbuj jeszcze raz. Pozostało {} próby".format(numberOfShots))
+                if liczba < random_number:
+                    print("podałeś za małą liczbę. Spróbuj jeszcze raz. Pozostało {} próby".format(numberOfShots))
             else:
                 print("Skończyły sie próby!")
                 next = False
