@@ -21,20 +21,20 @@ def quiz(rangeRandomNumber, numberOfShots):
 
 
 nextGame = True
-ifNextGame = True
+isNextGame = True
 print("Witaj użytkowniku! Przed Tobą gra polegająca na zgadywaniu liczby!")
 
-while ifNextGame:
+while isNextGame:
     while nextGame:
         print("Wybierz opcje gry:")
         print("a) losujesz liczbę z przedziału od 1 do 100 w pięciu krokach - wpisz 'a'")
         print("b) losujesz liczbę z przedziału od 1 do 1000 w siedmiu krokach - wpisz 'b'")
         option = str(input("Wybieram opcję: "))
 
-        if option =='a':
-            quiz(101,5)
+        if option == 'a':
+            quiz(101, 5)
             nextGame = False
-        elif option =='b':
+        elif option == 'b':
             quiz(1001, 7)
             nextGame = False
         else:
@@ -43,11 +43,11 @@ while ifNextGame:
     choice = input("Czy chcesz grać jeszcze raz? t/n: ")
 
     if choice == 't':
-        ifNextGame = True
+        isNextGame = True
         nextGame = True
     elif choice == 'n':
         print("Żegnaj!")
-        ifNextGame = False
+        isNextGame = False
     else:
         print("Wpisz 'n' albo 't'")
 
