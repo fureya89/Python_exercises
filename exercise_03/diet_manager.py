@@ -52,17 +52,14 @@ class Czlowiek:
         else:
             print("Waga prawidłowa. Nic nie musisz robić")
 
-kasia = Czlowiek("Kasia", 165, 70)
-kasia.count_bmi()
-kasia.diff_to_norm()
-kasia.what_to_do()
-
-basia = Czlowiek("Basia", 165, 45)
-basia.count_bmi()
-basia.diff_to_norm()
-basia.what_to_do()
-
-
+print("Witaj!")
+name = str(input("Podaj swoje imie: "))
+height = int(input("Podaj swój wzrost (w cm): "))
+weight = float(input("Podaj swoją wagę (w kg): "))
+person = Czlowiek(name,height,weight)
+person.count_bmi()
+person.diff_to_norm()
+person.what_to_do()
 
 
 
